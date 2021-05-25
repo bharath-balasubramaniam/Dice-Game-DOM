@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dice Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <p class="score" id="score--0">43</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <p class="score" id="score--1">24</p>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+      <button class="btn btn--how">❓ How to Play</button>
+      <div class="modal hidden" id="modal">
+        <button class="close-modal">&times;</button>
+        <h1>Instructions to Play 😍</h1>
+        <ul>
+          <li>Game starts from player 1</li>
+          <li>
+            The active player can role the dice. the dice score is add to the
+            current score.
+          </li>
+          <li>Each player can role their dice as much as they want.</li>
+          <li>
+            If you click the hold button the current score will get added to the
+            total score.
+          </li>
+          <li>
+            Whenever you role you lose all your current score and it's go to the
+            next player turn.
+          </li>
+          <li>
+            So holding your current score is the good one to avoid lose all your
+            score while getting one in the dice.
+          </li>
+          <li>One who reach 100 in the total score is the Winner🎊</li>
+        </ul>
+      </div>
+      <div class="overlay hidden" id="overlay"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
